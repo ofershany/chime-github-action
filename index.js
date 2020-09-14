@@ -5,7 +5,7 @@ const yaml = require('js-yaml')
 const { promises: fs } = require('fs')
 
 const main = async () => {
-  const path = core.getInput('path')
+  const path = core.getInput('config')
   const content = await fs.readFile(path, 'utf8')
   console.log(content)
   let config = yaml.safeLoad(content)
