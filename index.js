@@ -12,8 +12,8 @@ const main = async () => {
   let config = yaml.safeLoad(content)
   console.log(config)
   console.log('==============================')
-  console.log(config.schema[0].name)
-  console.log(config.schema[0].displayName)
+  console.log(config.application.schema[0].name)
+  console.log(config.application.schema[0].displayName)
   core.setOutput('appId', 'TEST')
 }
 
