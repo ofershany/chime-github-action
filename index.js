@@ -15,8 +15,15 @@ const main = async () => {
   console.log(config)
   console.log('==============================')
   
+  app = {};
+  app.schema = config.application.schema
+  app.name = config.application.meta.name
+  app.version = config.application.meta.version
+  app.decription = config.application.meta.description
+  app.author = config.application.meta.author
+  app.image = ofershanyshany/chime
   const body = await got.post(chimeurl+'/chime/v1/apps', {
-        json: config.application
+        json: app
     }).json();
   console.log(body);
   core.setOutput('appId', body.id)
