@@ -15,7 +15,7 @@ const main = async () => {
   console.log(config)
   console.log('==============================')
   
-  app = {};
+  let app = {};
   app.schema = config.application.schema
   app.name = config.application.meta.name
   app.version = config.application.meta.version
