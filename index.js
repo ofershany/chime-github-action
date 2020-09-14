@@ -5,7 +5,7 @@ const { promises: fs } = require('fs')
 
 const main = async () => {
   const path = core.getInput('path')
-  const content = await fs.readFile(path, 'utf8')i
+  const content = await fs.readFile(path, 'utf8')
   console.log(content)
   core.setOutput('appId', 'TEST')
 }
