@@ -21,7 +21,7 @@ const main = async () => {
   app.version = config.application.meta.version
   app.decription = config.application.meta.description
   app.author = config.application.meta.author
-  app.image = ofershanyshany/chime
+  app.image = 'ofershanyshany/chime'
   const body = await got.post(chimeurl+'/chime/v1/apps', {
         json: app
     }).json();
