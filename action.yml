@@ -1,0 +1,12 @@
+name: 'chime-action'
+description: 'Register a new chime developer application'
+inputs:
+  config:
+    description: 'config file path'
+    required: true
+outputs:
+  appId: # id of output
+    description: 'The id of the newly created application'
+runs:
+  using: 'node12'
+  main: 'index.js'
