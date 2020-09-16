@@ -8,6 +8,7 @@ const { promises: fs } = require('fs')
 const main = async () => {
   const path = core.getInput('config')
   const chimeurl = core.getInput('chimeurl')
+  const appimage = core.getrInput('appimage')
   const content = await fs.readFile(path, 'utf8')
   console.log(content)
   console.log('==============================')
@@ -21,7 +22,7 @@ const main = async () => {
   app.version = config.application.meta.version
   app.decription = config.application.meta.description
   app.author = config.application.meta.author
-  app.image = 'ofershanyshany/chime'
+  app.image = appimage
   const body = await got.post(chimeurl+'/chime/v1/apps', {
         json: app
     }).json();

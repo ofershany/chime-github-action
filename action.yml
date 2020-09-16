@@ -7,6 +7,9 @@ inputs:
   chimeurl:
     description: 'url fo chime services'
     required: true
+  appimage:
+    description: 'application container image'
+    required: true
 outputs:
   appId: # id of output
     description: 'The id of the newly created application'
