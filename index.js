@@ -8,7 +8,7 @@ const { promises: fs } = require('fs')
 const main = async () => {
   const path = core.getInput('config')
   const chimeurl = core.getInput('chimeurl')
-  const appimage = core.getrInput('appimage')
+  const appimage = core.getInput('appimage')
   const content = await fs.readFile(path, 'utf8')
   console.log(content)
   console.log('==============================')
